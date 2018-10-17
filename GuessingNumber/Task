@@ -1,0 +1,23 @@
+Write a simple number guessing game. The user should try to guess a number.
+If he guessed it right, he wins the game.
+
+Short but detailed:
+At the beginning a random number between your choice should be generated and the user should be told so.(random, print)
+Than the user needs to guess, what number was generated.(input)
+To help the user out, the program should give the user feedback, if his
+guessed number is lower or higher as the one he needs to guess.(if-conditions, print)
+If the user guessed the number correctly, he should be notified that he won.(print)
+Than he can choose to play again or quit(input, if-conditions)
+
+Advice:
+A while loop is very handy!
+Be careful not to generate the random number everytime again!
+
+Advanced:
+The user can only guess a limited time(e.g. after 5 guesses he loses)(for-loop).
+Keep track of the user score and print it after every round.
+
+Very advanced:
+Two player mode!
+Each player has one turn to guess the right number, if he is wrong it's the other players turn.
+The player which guessed the number first is the winner.

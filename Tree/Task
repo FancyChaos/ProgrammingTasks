@@ -1,0 +1,47 @@
+Write a python script, that draws a chrimstas tree!
+Ther user should be able to decide, how big(the height) the tree should be.
+The tree should be drawn accordingly to that.
+
+Examples:
+___________________
+Height: 2
+  
+ x 
+ x
+______________________
+
+Height: 3
+   
+  x 
+ x x 
+  x
+_____________________
+Height: 4
+    
+   x 
+  x x 
+ x x x 
+   x
+_____________________
+Height: 5
+     
+    x 
+   x x 
+  x x x 
+ x x x x 
+    x
+_____________________
+Height: 6
+     
+    x 
+   x x 
+  x x x 
+ x x x x 
+x x x x x 
+    x
+_____________________
+
+
+Advanced:
+Try to make your code as small as possible.
+It's possible to write everything within just two lines!

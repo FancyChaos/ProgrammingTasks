@@ -1,0 +1,15 @@
+Write a simple program, that will roll a dice and ask the user after that, if he want's to roll again.
+The user should be able to decide at the start, how many sides the dice should have.
+If the user decided that the dice should have e.g. 6 sides, the program can only output an result between 1 and 6.
+Just like a fucking dice, why all this explaining?
+
+Short but detailed:
+User decides how many sides the dice should have. (input)
+The program than should simulate a dice roll. (random)
+The rolled side should be printed. (print)
+The user can decide if he want's to play again or want's to quit. (input, while and if-conditions)
+
+Advice:
+The while loop should start AFTER the user decided, how many sides the dice should have.
+The if-condition to decide if the user wants to quit is inside the while loop.
+You can exit a while(True) loop with break.
