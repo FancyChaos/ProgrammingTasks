@@ -1,0 +1,22 @@
+Write a program that calculates prime numbers up to a given limit.
+
+Prime numbers:
+Prime numbers are natural numbers greater than 1 that cannot be formed by
+multiplying two smaller natural numbers.
+
+https://en.wikipedia.org/wiki/Prime_number
+
+First prime numbers are:
+2,3,5,7,11,13....
+
+Advice:
+- Use the modulo operator (%) to compute the rest of a division
+
+Advanced / Challenge:
+- Optimizie your algorithm and your code to make your program run faster.
+- Use the time module (or timeit) to measure the runtime of your code.
+
+Challenge Lvl 10000:
+- Can you write a program that uses multiprocessing to caulculate prime numbers
+up to a limit?
+- How many numbers can be checked from a known set of prime numbers?
