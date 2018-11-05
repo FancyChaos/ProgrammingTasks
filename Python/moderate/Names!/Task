@@ -1,0 +1,4 @@
+I'm sure you noticed the big names list inside of this directory. Your task is it to find out how many names are stored in this list and to print them out, ordered alphabetically.
+
+Advice:
+Use the already built-in functions! (like sorted or .split())

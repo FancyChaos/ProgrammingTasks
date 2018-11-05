@@ -1,0 +1,16 @@
+Your task is to write a decorator function, that will
+wrap given HTML tags around a string.
+
+Example:
+
+## CODE ##
+@tag("p div span")
+def wrap(text):
+    return text
+
+wrap("Test")
+## CODE ##
+
+## OUTPUT ##
+<p> <div> <span> Test </span> </div> </p>
+## OUTPUT ##
