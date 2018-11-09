@@ -17,11 +17,6 @@ if sys.version_info[0] == 2:
     input = raw_input
 
 
-# Errors do annoy sh
-# Weird printing else
-# So just render these errors useless! :D
-exit_codes = (i for i in range(0, 9))
-
 # Path where this python script is located when it's run
 curr_dir = pathlib.Path(os.path.dirname(os.path.abspath(__file__)))
 
@@ -63,6 +58,11 @@ print('[*] Searchterm: {}\n'.format(search_term))
 
 input('\n[$] Press any key to continue...')
 
+
+# We will give these exit_codes to the wget call later
+# to disabled every exit/error message (will look horribly else)
+exit_codes = (i for i in range(0, 9))
+
 # Sets off the wget -m <url> -P <directory> commande
 # It's written so weird, so we can see the output of the program
 try:
@@ -74,12 +74,13 @@ except Exception:
 
 # Copying the files we want to save
 try:
+    # Get every file with the correct searchterm from the folder where the webpage is saved
     files = list(page_dir.glob("**/*{}".format(search_term)))
     if not files:
         print("[!] No matching files found")
     else:
         print("[*] Copying {} *{} files...".format(len(files), search_term))
-        for f in page_dir.glob("**/*{}".format(search_term)):
+        for f in files:
             shutil.copy(f, save_dir)
 except Exception as e:
     print('[!] Something went wrong while copying data')
