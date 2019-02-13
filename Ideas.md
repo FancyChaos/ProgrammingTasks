@@ -2,7 +2,7 @@
 Different programming tasks ideas can be found here which should get implemented in the future.
 
 If you have a great idea for one then please write it down in this document and do a pull request so that others can implement your task :)\
-Of course you can implement you own idea by yourself, this document should just show what will be included in the future and serves as a notebook.\
+Of course you can implement you own idea by yourself, this document should just show what will be included in the future and serves as a notebook.
 
 Suggestions for improvements of already existing task can be written down too.
 
