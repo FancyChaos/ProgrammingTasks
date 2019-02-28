@@ -1,4 +1,5 @@
-## Solution to the number guessing game ##
+#!/usr/bin/env python
+# Solution to the number guessing game
 import random
 
 
@@ -7,7 +8,7 @@ def main():
     while True:
         print("A secret number between 1 and 10 occured!")
         guess = int(input("What is your guess?: "))
-        
+
         if guess == secret_number:
             print("You won!")
             play_again = input("Do you want to play again?: ")

@@ -1,4 +1,13 @@
-I'm sure you noticed the big names list inside of this directory. Your task is it to find out how many names are stored in this list and to print them out, ordered alphabetically.
+I'm sure you noticed the big names.txt list inside of this directory.
+Your task is it to find out how many names are stored in this list
+and to print them out, ordered alphabetically.
 
 Advice:
 Use the already built-in functions! (like sorted or .split())
+
+Challenge - Encoding problems needed?
+What about evil_names.txt? Can you write a program handling this "broken" file
+correctly?
+
+Advanced:
+How to handle such cases in python2 / python3 ?
