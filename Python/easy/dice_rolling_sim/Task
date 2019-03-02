@@ -7,9 +7,12 @@ Short but detailed:
 User decides how many sides the dice should have. (input)
 The program than should simulate a dice roll. (random)
 The rolled side should be printed. (print)
-The user can decide if he want's to play again or want's to quit. (input, while and if-conditions)
+The user can decide if he/she want's to play again or want's to quit. (input, while and if-conditions)
 
 Advice:
 The while loop should start AFTER the user decided, how many sides the dice should have.
 The if-condition to decide if the user wants to quit is inside the while loop.
 You can exit a while(True) loop with break.
+
+Challenge:
+Try to catch user input error like entering "foo" as number of sides on the dice

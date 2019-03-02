@@ -1,0 +1,11 @@
+Add every number till 1000 to each other, but only
+if the number can be divided by 3 or by 5.
+
+Advice:
+Read about the modulo operator!
+
+Challenge:
+Raise the limit to higher numbers than 1000. Check the memory usage of your program!
+
+Advanced:
+What's the difference between range and xrange in Python 2 ?

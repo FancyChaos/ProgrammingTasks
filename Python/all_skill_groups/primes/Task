@@ -17,6 +17,6 @@ Advanced / Challenge:
 - Use the time module (or timeit) to measure the runtime of your code.
 
 Challenge Lvl 10000:
-- Can you write a program that uses multiprocessing to caulculate prime numbers
+- Can you write a program that uses multiprocessing to calculate prime numbers
 up to a limit?
 - How many numbers can be checked from a known set of prime numbers?

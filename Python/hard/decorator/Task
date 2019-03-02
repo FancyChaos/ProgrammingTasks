@@ -1,16 +1,14 @@
-Your task is to write a decorator function, that will
-wrap given HTML tags around a string.
+Decorators are a handy feature which may be used for many purposes in python.
+Read this very good (advanced) guide before starting this task:
 
-Example:
+https://github.com/hchasestevens/hchasestevens.github.io/blob/master/notebooks/the-decorators-they-wont-tell-you-about.ipynb
 
-## CODE ##
-@tag("p div span")
-def wrap(text):
-    return text
+Now lets do some evil stuff! We focus on decorating functions here, but as we've
+learned much more is possible!
 
-wrap("Test")
-## CODE ##
-
-## OUTPUT ##
-<p> <div> <span> Test </span> </div> </p>
-## OUTPUT ##
+Write a decorator for a function...
+...that makes the function callable for N times, then throws an error
+...that memorizes all function call results, but return a random one
+...that "throws a coin" to check if function executes or throws error
+...that takes a sequence of forbidden characters which are not allowed in function source code
+...that takes a chcaracter map containing limits for chars to be used, e.g. only 3 "e" and 4 "a"
