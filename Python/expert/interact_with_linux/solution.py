@@ -3,6 +3,7 @@ import os
 import shutil
 import sys
 import pathlib
+import logging
 
 # I will NEVER EVER use subproccess again
 # At least not for something like Popen
@@ -44,10 +45,10 @@ if save_dir.is_dir():
     print('[!] {} is already a directory!'.format(save_dir))
     choice = input('[!] Delete it?(y/n): '.format(save_dir)).lower()
     if choice == 'y':
-        shutil.rmtree(save_dir)
+        shutil.rmtree(save_dir.absolute().as_posix())
     else:
         sys.exit(0)
-os.makedirs(save_dir)
+os.makedirs(save_dir.absolute().as_posix())
 print('[*] Directory to save findings: {}\n'.format(save_name))
 
 # The searchterm (which files we want to copy)
@@ -81,7 +82,7 @@ try:
     else:
         print("[*] Copying {} *{} files...".format(len(files), search_term))
         for f in files:
-            shutil.copy(f, save_dir)
+            shutil.copy(f.absolute().as_posix(), save_dir.absolute().as_posix())
 except Exception as e:
     print('[!] Something went wrong while copying data')
     print(e)
@@ -89,6 +90,6 @@ except Exception as e:
 # Deleting the saved webpage, cause we don't need it anymore
 print('\n[*] Cleaning up...\n')
 if page_dir.is_dir():
-    shutil.rmtree(page_dir)
+    shutil.rmtree(page_dir.absolute().as_posix())
 
 print('[*] All done!')
