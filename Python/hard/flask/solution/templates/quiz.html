@@ -1,0 +1,12 @@
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+        <h3> {{ message  }}</h3>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<form method="post">
+  <label for="answer">Was ist die Wurzel aus 49?</label>
+  <input name="answer" id="answer" required>
+  <input type="submit" value="prüfen">
+</form>

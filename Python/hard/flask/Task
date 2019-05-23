@@ -1,0 +1,15 @@
+The Task is to create a website with the flask framework.
+
+1. install the flask framework
+2. Create a simple Hello World! Page
+3. Display a simple html file
+4. Modify the style via css
+5. Implement some html code via jinja2 
+6. Create html data in the displayed html file depending on the url
+7. Create a quiz input form asking a simple question
+
+Advice
+Check out http://flask.pocoo.org/
+
+Challenge
+Implement a way to create a form to upload files to the server
