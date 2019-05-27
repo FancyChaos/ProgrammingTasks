@@ -1,3 +1,5 @@
+
+<!--Display messages like Correct, when they were flashed-->
 {% with messages = get_flashed_messages() %}
    {% if messages %}
       {% for message in messages %}
@@ -5,6 +7,7 @@
       {% endfor %}
    {% endif %}
 {% endwith %}
+<!-- the form which asks the quiz question -->
 <form method="post">
   <label for="answer">Was ist die Wurzel aus 49?</label>
   <input name="answer" id="answer" required>

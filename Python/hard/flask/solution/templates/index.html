@@ -1,17 +1,22 @@
 <!doctype html>
+<!-- implement the css stylesheet -->
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <title>This is my Flusk tab</title>
 <nav>
+  <!--create a link opening this page-->
   <h1><a href="{{ url_for('index') }}">Home</a></h1>
   <ul>
+    <!--create an anchor for the redirect url-->
       <li><a href="{{url_for('redirection')}}">Google</a>
   </ul>
 </nav>
 <section class="content">
     <h1>Flask Module</h1>
+    <!--Wenn in der url ein name steht, begrüße diesen-->
     {% if name %}
     <h2>Hello {{name}}</h2>
     {% endif %}
+    <!--links zu den Feature Seiten-->
     <h3><a href="{{ url_for('upload_file')}}">Upload File</a></h3>
     <h3><a href="{{ url_for('quiz')}}">Quiz</a></h3>
 </section>
