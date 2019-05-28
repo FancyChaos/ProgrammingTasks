@@ -1,0 +1,8 @@
+This task uses the kivy gui framework
+
+1. install kivy for python3: https://kivy.org/#download
+2. run the usage sample: https://kivy.org/#home
+3. create a simple chatroom gui, wtih a chat, a message field and a send button
+
+Challenge:
+Apply the gui to the Chatroom from the Sockets/Threading Task to your created gui
