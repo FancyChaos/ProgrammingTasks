@@ -1,0 +1,15 @@
+To open files is important in python. Learn to use the ioLib and consider
+what do to when you encounter very big files like "myins.sql" 
+(download: https://www.file-upload.net/download-13644670/myins.sql.html),
+which contains sql inserts for tables with more than 5 billion entries.
+
+1. Open the file in python and print a few lines to the console
+2. Replace the characters that ruin the sql inserts in postgreSQ
+  (`,'????',1 as TRUE,0 as FALSE)
+3. Save your work to another file
+
+Challenge:
+Have a look at the memory usage of your python script, for it loads the big files
+into your ram ( Tip: python package psutil)
+
+Find a way to reduce the memory usage of your script
