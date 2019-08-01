@@ -1,6 +1,7 @@
 import os
 import math
 import time
+import sys
 from multiprocessing import Process,Queue,Manager,cpu_count
 
 def timed(function):
@@ -56,10 +57,8 @@ def turboRange(known_prims,start,limit,num):
                 isprime = False
                 break  # we can stop checking here!
         if isprime:
-            known_prims.append(number)
             result.append(number)
     return_vals[num] = result
-    return result
 
 
 
@@ -78,14 +77,15 @@ def turboPrallel(limit):
     # precalculation
     needed_prims = int(math.ceil(math.sqrt(limit)))
     known_prims = turboNoTime(needed_prims)
-    start = len(known_prims)
+    start = known_prims[-1] + 1
 
+    # process setup
     process_count = cpu_count()
-    missing_prim_count = start
-    prims_per_process = int(math.floor((limit - missing_prim_count) / process_count))
-    processes=[]
+    prims_per_process = int(math.floor((limit - start) / process_count))
+    processes = []
     for proc_index in range(process_count):
 
+        # make sure we calculate exactly to the limit
         if proc_index == process_count - 1:
             end = limit
         else:
@@ -97,9 +97,9 @@ def turboPrallel(limit):
         )
         processes.append(proc)
         proc.start()
-        print('proc start calculating from %s to %s' % (start, end))
         start+=prims_per_process
 
+    # wait for procs and and fetch results
     for index, proc in enumerate(processes):
         proc.join()
         known_prims.extend(return_vals[index])
@@ -146,8 +146,13 @@ def sumMethod(n):
 manager = Manager()
 return_vals = manager.dict()
 
+# use argument script is called with or ask user for limit
+if len(sys.argv) == 2:  # this is very lazy, use argparse for complicated stuff
+    limit = int(sys.argv[1])
+else:
+    limit = input("Please enter upper limit for prime number calculation: ")
 
-limit = input("Obere Schranke fuer Primzahlenberechnung eingeben")
+# fetch results, sort (for comparison), cast to list (python3)
 res1 = list(sorted(turboPrallel(limit)))
 res2 = list(sorted(turbo(limit)))
 res3 = list(sorted(sumMethod(limit)))
