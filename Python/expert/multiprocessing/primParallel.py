@@ -1,7 +1,7 @@
 import os
 import math
 import time
-from multiprocessing import Process,Queue,Manager
+from multiprocessing import Process,Queue,Manager,cpu_count
 
 def timed(function):
     '''timing decorator'''
@@ -44,19 +44,19 @@ def turboNoTime(LIMIT):
             result.append(number)
     return result
 
-def turboRange(bekannte_prims,start,limit,num):
+def turboRange(known_prims,start,limit,num):
     '''super turbo version'''
     result = []
     for number in range(start, limit):
         isprime = True
-        for divisor in bekannte_prims:  # we only have to check for prime numbers!
+        for divisor in known_prims:  # we only have to check for prime numbers!
             if divisor ** 2 > number:  # we can also stop checking here!
                 break                  # such divisors cannot occur in factorization
             if number % divisor == 0:
                 isprime = False
                 break  # we can stop checking here!
         if isprime:
-            bekannte_prims.append(number)
+            known_prims.append(number)
             result.append(number)
     return_vals[num] = result
     return result
@@ -65,34 +65,46 @@ def turboRange(bekannte_prims,start,limit,num):
 
 @timed
 def turboPrallel(limit):
+    '''
+    Uses multiprocessing to accelerate prime number calculation using the turbo
+    function from primes excercise solution. Steps:
+
+    - precalculate needed prime numbers to build chunks for parallel calculation
+    - set up chunks and pass them to processes created via multiprocessing
+      module
+    - start processes, wait for them to finish and fetch results
+    '''
+
+    # precalculation
     needed_prims = int(math.ceil(math.sqrt(limit)))
-    bekannte_prims = turboNoTime(needed_prims)
-    start = len(bekannte_prims)
+    known_prims = turboNoTime(needed_prims)
+    start = len(known_prims)
 
-
-    process_count = 10
+    process_count = cpu_count()
     missing_prim_count = start
     prims_per_process = int(math.floor((limit - missing_prim_count) / process_count))
-
-
-
     processes=[]
-    for i in range(0,process_count):
-        if i == process_count-1:
-            processes.append(Process(target=turboRange,args = (bekannte_prims, start,int(limit),i)))
-            break
-        processes.append(Process(target=turboRange,args = (bekannte_prims, start,start+prims_per_process,i)))
+    for proc_index in range(process_count):
+
+        if proc_index == process_count - 1:
+            end = limit
+        else:
+            end = start + prims_per_process
+
+        proc = Process(
+            target=turboRange,
+            args = (known_prims, start, end, proc_index)
+        )
+        processes.append(proc)
+        proc.start()
+        print('proc start calculating from %s to %s' % (start, end))
         start+=prims_per_process
 
+    for index, proc in enumerate(processes):
+        proc.join()
+        known_prims.extend(return_vals[index])
 
-
-    for i in range(0,process_count):
-        processes[i].start()
-
-    for i in range(0,process_count):
-        processes[i].join()
-        bekannte_prims.extend(return_vals[i])
-    return bekannte_prims
+    return known_prims
 
 
 @timed
@@ -136,6 +148,9 @@ return_vals = manager.dict()
 
 
 limit = input("Obere Schranke fuer Primzahlenberechnung eingeben")
-turboPrallel(limit)
-turbo(limit)
-sumMethod(limit)
+res1 = list(sorted(turboPrallel(limit)))
+res2 = list(sorted(turbo(limit)))
+res3 = list(sorted(sumMethod(limit)))
+
+assert res1 == res2, 'Results 1 and 2 do not match! %s != %s' % (res1, res2)
+assert res1 == res3, 'Results 1 and 3 do not match! %s != %s' % (res1, res3)
