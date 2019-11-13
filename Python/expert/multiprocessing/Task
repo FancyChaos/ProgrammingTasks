@@ -1,0 +1,10 @@
+Learn to use the Python Module multiprocessing that is used to run code simultaneously on different cpu cores.
+
+1. Create a simple script that calls a method in multiple processes
+2. Use the script of the prime calculation to write a multiprocessing variation
+
+Challenge
+Read about the Summenverfahren to calculate prims
+http://www.geraldbuehler.de/primzahlen/
+Try to calculate primes with this algorithm
+-> Why is this algoithm not easy to use with multiprocessing?

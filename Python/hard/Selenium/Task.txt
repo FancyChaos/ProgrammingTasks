@@ -1,0 +1,19 @@
+Get started with Selenium, a tool to automate Browsing.
+
+1. run selenium_env.sh to create an environment which has selenium installed
+2. run . venv3/bin/activate
+3. Run start.py and see what happens
+4. Understand start.py
+5. create a script that displays the weather for 32052 Herford 5 seconds navigating
+    from each of this sites:
+    -https://www.wetter.de/
+    -https://www.wetteronline.de/wetter
+6. Add https://www.wetter.com/ to the site (harder)
+
+
+Advise:
+Use the developer tools ( Ctrl+Shift+c in Firefox) to inspect the pages
+
+Challenge:
+Create a Selenium Script which beats the towers of Hanoi game:
+https://www.webgamesonline.com/towers-of-hanoi/

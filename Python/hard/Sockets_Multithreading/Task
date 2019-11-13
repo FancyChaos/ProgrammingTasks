@@ -1,0 +1,12 @@
+This task is about the Socket module and the thread module
+
+1. Learn about the Socket module and create a simple server that echos everything a client writes
+2. Learn about the Threading module and try to build a server accepting multiple clients
+
+Challenge:
+Create a python chatroom, where clients can chat with each other
+
+Tip:
+The chatroom can't use input() to get the players messages
+because incoming messages break the input listening.
+Solution: http://code.activestate.com/recipes/134892/
