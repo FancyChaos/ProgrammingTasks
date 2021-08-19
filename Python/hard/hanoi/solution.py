@@ -8,7 +8,7 @@ def solve(towers, first, second, third, count):
     '''Moves the first count discs from the first to the third tower by
     termporarily moving count - 1 discs to the second tower, then moving the
     biggest disc to the third, and, finally, moving the count - 1 discs from the
-    second tower as well'''
+    second tower to the third tower as well'''
     if count == 0:
         return
 
