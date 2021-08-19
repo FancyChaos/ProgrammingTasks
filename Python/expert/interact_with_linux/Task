@@ -1,15 +1,15 @@
-The task is to write a Python script, which will run the command 
+The task is to write a Python script that will run the command
 "wget -m <url> -P <directory>"
 This command will download every file on a given webpage and put it in the given directory.
 
-Than the script should copy every file of a specific type into another folder, like every .png image. The user can choose at the beginning, where and which files they want to save.
+Then, the script should copy every file of a specific type into another folder, like every .png image. The user can choose at the beginning, where and which files they want to save.
 
 Advice:
-Run the solution first, to see what the program should do (don't look at it!!!)
-Use the library sh! This is an excellent library to interact with linux porgrams (You need to download/install it with pip)
+Run the solution first to see what the program should do (don't look at the source code!!!)
+Use the library sh! It's an excellent library to interact with linux programs (You may need to download/install it using pip or your package manager)
 Make use of Python3+ features like pathlib!
 Validate the input of the user.
 
 Keep in mind:
-The solution is heavely optimized for Python3+ and uses a external
-(but great) library called sh
+The solution is heavily optimized for Python3+ and uses a external
+(but great) library called sh.
