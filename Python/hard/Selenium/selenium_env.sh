@@ -7,12 +7,12 @@ virtualenv -p python3 venv3
 
 pip install selenium
 
-wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+wget https://github.com/mozilla/geckodriver/releases/download/v0.31.0/geckodriver-v0.31.0-linux64.tar.gz
 
-tar vfxz geckodriver-v0.23.0-linux64.tar.gz
+tar vfxz geckodriver-v0.31.0-linux64.tar.gz
 
 mv geckodriver venv3/bin
 
-rm geckodriver-v0.23.0-linux64.tar.gz
+rm geckodriver-v0.31.0-linux64.tar.gz
 
 deactivate
