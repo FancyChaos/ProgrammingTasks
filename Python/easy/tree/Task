@@ -5,42 +5,46 @@ The tree should be drawn accordingly to that.
 Examples:
 ___________________
 Height: 2
-  
- x 
+
+ x
  x
 ______________________
 
 Height: 3
-   
-  x 
- x x 
+
+  x
+ x x
   x
 _____________________
 Height: 4
-    
-   x 
-  x x 
- x x x 
+
+   x
+  x x
+ x x x
    x
 _____________________
 Height: 5
-     
-    x 
-   x x 
-  x x x 
- x x x x 
+
+    x
+   x x
+  x x x
+ x x x x
     x
 _____________________
 Height: 6
-     
-    x 
-   x x 
-  x x x 
- x x x x 
-x x x x x 
+
+    x
+   x x
+  x x x
+ x x x x
+x x x x x
     x
 _____________________
 
+
+Hint:
+Start by looking at the first line, and how the height influences it.
+Try to find a correlation between the height, line number, and string to print.
 
 Advanced:
 Try to make your code as small as possible.

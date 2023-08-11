@@ -1,3 +1,4 @@
+# TODO: download link expired
 Opening files is an every day task in python. Learn to use the io lib and consider
 what do to when you encounter very big files like "myins.sql"
 (download: https://www.file-upload.net/download-13644670/myins.sql.html),

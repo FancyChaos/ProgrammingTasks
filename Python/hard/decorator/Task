@@ -11,4 +11,4 @@ Write a decorator for a function...
 ...that memorizes all function call results, but return a random one
 ...that "throws a coin" to check if function executes or throws error
 ...that takes a sequence of forbidden characters which are not allowed in function source code
-...that takes a chcaracter map containing limits for chars to be used, e.g. only 3 "e" and 4 "a"
+...that takes a character map containing limits for chars to be used, e.g. only 3 "e" and 4 "a"

@@ -1,15 +1,32 @@
 The Task is to create a website with the flask framework.
+(Documentation can be found at https://flask.palletsprojects.com)
 
 1. install the flask framework
 2. Create a simple Hello World! Page
 3. Display a simple html file
 4. Modify the style via css
-5. Implement some html code via jinja2 
+5. Implement some html code via jinja2
 6. Create html data in the displayed html file depending on the url
 7. Create a quiz input form asking a simple question
 
 Advice
 Check out http://flask.pocoo.org/
+
+Hints:
+Start by reading https://flask.palletsprojects.com/en/2.3.x/quickstart/#a-minimal-application
+
+2. You can simply return a string containing some HTML
+3. Open and read the contents of a HTML file, then return them
+4. Save a stylesheet.css according to https://flask.palletsprojects.com/en/2.3.x/quickstart/#static-files
+    and reference it inside your HTML file
+5. Read https://jinja.palletsprojects.com/en/3.1.x/templates/ to learn about Jinja
+    and https://flask.palletsprojects.com/en/2.3.x/quickstart/#rendering-templates
+    to ĺearn how to use it with Flask.
+    start by simply displaying a variable in HTML
+6. Look at how to pass values through URLs
+    (Example https://flask.palletsprojects.com/en/2.3.x/quickstart/#rendering-templates)
+7. Read about how to create a HTML form and how to use it with flask
+    (https://flask.palletsprojects.com/en/2.3.x/quickstart/#the-request-object)
 
 Challenge
 Implement a way to create a form to upload files to the server
