@@ -13,4 +13,5 @@ Your function must handle invalid chars like "#" or " " with score = 0 and
 must be case insensitive.
 
 Advice:
+Read about dictionaries in Python.
 Check the get-Method of dictionaries!
